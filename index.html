@@ -27,8 +27,8 @@
                             50: '#eff6ff',
                             100: '#dbeafe',
                             500: '#3b82f6',
-                            600: '#0066cc', /* Color principal logo */
-                            900: '#0a0f24', /* Color oscuro logo */
+                            600: '#0066cc',
+                            900: '#0a0f24',
                         }
                     }
                 }
@@ -85,12 +85,7 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <!-- Usando texto/icono como fallback si no está el archivo, pero preparado para tu logo -->
-                    <div class="font-bold text-3xl tracking-tighter text-blue-900 flex items-center gap-2">
-                        <i class="fa-solid fa-cube text-blue-600"></i> BLUELAB
-                    </div>
-                    <!-- Para usar tu imagen, descomenta la línea de abajo y borra el div de arriba -->
-                    <!-- <img src="BLUELAB logo sin fondo.png" alt="Bluelab Logo" class="h-12"> -->
+                    <img src="BLUELAB logo sin fondo.png" alt="Bluelab Logo" class="h-14 md:h-16 object-contain" onerror="this.outerHTML='<div class=\'font-bold text-3xl tracking-tighter text-blue-900 flex items-center gap-2\'><i class=\'fa-solid fa-cube text-blue-600\'></i> BLUELAB</div>'">
                 </div>
                 
                 <!-- Desktop Menu -->
@@ -100,6 +95,13 @@
                     <a href="#servicios" class="text-gray-700 hover:text-blue-600 font-semibold transition">Servicios</a>
                     <a href="#portfolio" class="text-gray-700 hover:text-blue-600 font-semibold transition">Portfolio</a>
                     <a href="#contacto" class="bg-blue-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-700 transition shadow-lg hover:shadow-blue-500/30">Contactar</a>
+                    
+                    <!-- Redes sociales Desktop -->
+                    <div class="flex items-center gap-4">
+                        <a href="https://www.instagram.com/bluelab.design" target="_blank" class="text-gray-600 hover:text-blue-600 transition"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="https://www.tiktok.com/@bluelab.design" target="_blank" class="text-gray-600 hover:text-blue-600 transition"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                        <a href="https://www.facebook.com/search/top?q=Bluelab%20Ja%C3%A9n" target="_blank" class="text-gray-600 hover:text-blue-600 transition"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+                    </div>
                 </div>
 
                 <!-- Mobile menu button -->
@@ -120,6 +122,12 @@
                 <a href="#portfolio" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md">Portfolio</a>
                 <a href="#contacto" class="block px-3 py-3 text-base font-medium text-blue-600 font-bold hover:bg-blue-50 rounded-md">Contactar</a>
             </div>
+            <!-- Redes sociales Mobile -->
+            <div class="px-4 py-5 bg-gray-50 border-t border-gray-100 flex justify-center gap-8">
+                <a href="https://www.instagram.com/bluelab.design" target="_blank" class="text-gray-600 hover:text-blue-600 text-2xl"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@bluelab.design" target="_blank" class="text-gray-600 hover:text-blue-600 text-2xl"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/search/top?q=Bluelab%20Ja%C3%A9n" target="_blank" class="text-gray-600 hover:text-blue-600 text-2xl"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
         </div>
     </nav>
 
@@ -136,7 +144,7 @@
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#servicios" class="bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-500 transition shadow-lg shadow-blue-600/30">Nuestros Servicios</a>
-                <a href="#contacto" class="bg-white/10 backdrop-blur border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-blue-900 transition">Presupuesto sin compromiso</a>
+                <a href="#contacto" class="bg-white/10 backdrop-blur border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-blue-900 transition">Pedir propuesta o presupuesto</a>
             </div>
         </div>
         
@@ -159,7 +167,7 @@
         </div>
     </div>
 
-    <!-- Sección 1: Información (Sobre nosotros) -->
+    <!-- Sección 1: Información -->
     <section id="informacion" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -179,7 +187,6 @@
                     </div>
                 </div>
                 <div class="relative fade-in">
-                    <!-- Decoración visual -->
                     <div class="absolute -inset-4 bg-blue-100 rounded-2xl transform rotate-3 z-0"></div>
                     <img src="https://images.unsplash.com/photo-1530968033775-2c92736b131e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Taller e Innovación" class="relative z-10 rounded-2xl shadow-xl w-full object-cover h-[500px]">
                     
@@ -203,7 +210,6 @@
 
             <!-- Main Services Cards -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                <!-- Servicio 1 -->
                 <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:border-blue-500 transition-all duration-300 group fade-in">
                     <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                         <i class="fa-solid fa-cube text-3xl text-blue-600 group-hover:text-white"></i>
@@ -211,7 +217,6 @@
                     <h3 class="text-2xl font-bold text-blue-900 mb-3">Diseño 3D</h3>
                     <p class="text-gray-600">Diseño personalizado desde cero para dar vida a tus prototipos, piezas técnicas o ideas decorativas.</p>
                 </div>
-                <!-- Servicio 2 -->
                 <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:border-blue-500 transition-all duration-300 group fade-in">
                     <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                         <i class="fa-solid fa-print text-3xl text-blue-600 group-hover:text-white"></i>
@@ -219,7 +224,6 @@
                     <h3 class="text-2xl font-bold text-blue-900 mb-3">Impresión 3D</h3>
                     <p class="text-gray-600">Impresión bajo demanda de alta calidad. Desde regalos personalizados hasta pequeñas producciones industriales.</p>
                 </div>
-                <!-- Servicio 3 -->
                 <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:border-blue-500 transition-all duration-300 group fade-in">
                     <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                         <i class="fa-solid fa-wand-magic-sparkles text-3xl text-blue-600 group-hover:text-white"></i>
@@ -227,7 +231,6 @@
                     <h3 class="text-2xl font-bold text-blue-900 mb-3">Grabado Láser</h3>
                     <p class="text-gray-600">Grabado de alta precisión en láser de CO2 sobre madera, piel, metal, aluminio, cristal y acrílico.</p>
                 </div>
-                <!-- Servicio 4 -->
                 <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:border-blue-500 transition-all duration-300 group fade-in">
                     <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                         <i class="fa-solid fa-scissors text-3xl text-blue-600 group-hover:text-white"></i>
@@ -245,11 +248,12 @@
                     <ul class="space-y-3 relative z-10">
                         <li class="flex items-start"><i class="fa-solid fa-check text-blue-400 mt-1 mr-3"></i> Impresión y diseño 3D bajo demanda</li>
                         <li class="flex items-start"><i class="fa-solid fa-check text-blue-400 mt-1 mr-3"></i> Fabricación de productos y complementos en piel</li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-blue-400 mt-1 mr-3"></i> Cartelería en madera y 3D (empresas/particulares)</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-blue-400 mt-1 mr-3"></i> Detalles para graduaciones, profesores y alumnos</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-blue-400 mt-1 mr-3"></i> Material técnico para gimnasios y piezas de automovilística</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-blue-400 mt-1 mr-3"></i> Cartelería en madera y 3D</li>
                         <li class="flex items-start"><i class="fa-solid fa-check text-blue-400 mt-1 mr-3"></i> Detalles para eventos (bodas, comuniones, etc.)</li>
                         <li class="flex items-start"><i class="fa-solid fa-check text-blue-400 mt-1 mr-3"></i> Señalética y merchandising corporativo</li>
                         <li class="flex items-start"><i class="fa-solid fa-check text-blue-400 mt-1 mr-3"></i> Prototipado y piezas de repuesto para empresas</li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-blue-400 mt-1 mr-3"></i> Figuras, llaveros corporativos y regalos personalizados</li>
                     </ul>
                 </div>
 
@@ -260,14 +264,14 @@
                             <div class="bg-blue-100 p-3 rounded-full text-blue-600"><i class="fa-solid fa-user fa-fw"></i></div>
                             <div>
                                 <h4 class="font-bold text-gray-800">Particulares</h4>
-                                <p class="text-sm text-gray-500">Regalos, decoración, trofeos...</p>
+                                <p class="text-sm text-gray-500">Regalos, decoración, graduaciones...</p>
                             </div>
                         </div>
                         <div class="bg-white p-6 rounded-xl shadow border border-gray-100 flex items-center gap-4">
                             <div class="bg-blue-100 p-3 rounded-full text-blue-600"><i class="fa-solid fa-building fa-fw"></i></div>
                             <div>
                                 <h4 class="font-bold text-gray-800">Empresas</h4>
-                                <p class="text-sm text-gray-500">Prototipos, piezas técnicas...</p>
+                                <p class="text-sm text-gray-500">Prototipos, automoción, gimnasios...</p>
                             </div>
                         </div>
                         <div class="bg-white p-6 rounded-xl shadow border border-gray-100 flex items-center gap-4">
@@ -280,8 +284,8 @@
                         <div class="bg-white p-6 rounded-xl shadow border border-gray-100 flex items-center gap-4">
                             <div class="bg-blue-100 p-3 rounded-full text-blue-600"><i class="fa-solid fa-lightbulb fa-fw"></i></div>
                             <div>
-                                <h4 class="font-bold text-gray-800">Makers / Hobby</h4>
-                                <p class="text-sm text-gray-500">Proyectos personales...</p>
+                                <h4 class="font-bold text-gray-800">Makers / Educativo</h4>
+                                <p class="text-sm text-gray-500">Proyectos, alumnos, profesores...</p>
                             </div>
                         </div>
                     </div>
@@ -299,9 +303,13 @@
                 <p class="text-lg text-gray-600">Explora algunos de nuestros últimos trabajos en impresión 3D, grabado y corte láser.</p>
             </div>
 
-            <!-- Galería generada por JavaScript -->
-            <div id="portfolio-gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 fade-in">
-                <!-- Los items se cargarán aquí desde el script -->
+            <!-- Galería generada por JavaScript y la API -->
+            <div id="portfolio-gallery" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 fade-in">
+                <!-- Los items se cargarán aquí desde la API -->
+                <div class="col-span-full text-center py-12">
+                    <i class="fa-solid fa-circle-notch fa-spin text-4xl text-blue-500 mb-4"></i>
+                    <p class="text-gray-500">Cargando portfolio...</p>
+                </div>
             </div>
             
             <div class="text-center mt-12">
@@ -315,14 +323,13 @@
     <!-- Sección 4: Contacto -->
     <section id="contacto" class="py-24 bg-gray-50 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 bg-white rounded-3xl shadow-2xl overflow-hidden fade-in">
                 
                 <!-- Info de Contacto -->
                 <div class="bg-blue-900 text-white p-10 md:p-16 flex flex-col justify-between">
                     <div>
                         <h2 class="text-4xl font-extrabold mb-4">Contacta con nosotros</h2>
-                        <p class="text-blue-200 mb-10 text-lg">Cuéntanos tu idea o solicita un presupuesto sin compromiso. Estaremos encantados de atenderte.</p>
+                        <p class="text-blue-200 mb-10 text-lg">Cuéntanos tu idea, pregúntanos por propuestas o solicita un presupuesto sin compromiso. Estaremos encantados de atenderte.</p>
                         
                         <div class="space-y-6">
                             <div class="flex items-start">
@@ -341,8 +348,12 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-lg mb-1">Teléfonos</h4>
+                                    <!-- Cambio de orden: Móvil primero -->
+                                    <p class="text-blue-200 mb-1 flex items-center gap-2">
+                                        Móvil/Whatsapp: 634 119 152 
+                                        <i class="fa-brands fa-whatsapp text-[#25D366]"></i>
+                                    </p>
                                     <p class="text-blue-200">Fijo: 953 202 284</p>
-                                    <p class="text-blue-200">Móvil/Whatsapp: 634 119 152</p>
                                 </div>
                             </div>
                             
@@ -370,22 +381,24 @@
 
                 <!-- Formulario y Mapa -->
                 <div class="p-10 md:p-16 flex flex-col">
-                    <h3 class="text-2xl font-bold text-blue-900 mb-6">Envíanos un mensaje</h3>
-                    <form action="mailto:bluelabstudio3d@gmail.com" method="GET" enctype="text/plain" class="space-y-4 mb-10 flex-grow">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-6">Pide tu propuesta por WhatsApp</h3>
+                    <!-- Formulario reprogramado para enviar a WhatsApp -->
+                    <form onsubmit="enviarWhatsapp(event)" class="space-y-4 mb-10 flex-grow">
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
-                            <input type="text" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition" placeholder="Tu nombre">
+                            <input type="text" id="form-nombre" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#25D366] focus:border-transparent outline-none transition" placeholder="Tu nombre">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
-                            <textarea name="body" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition" placeholder="¿En qué podemos ayudarte?"></textarea>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Tu idea o propuesta</label>
+                            <textarea id="form-mensaje" required rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#25D366] focus:border-transparent outline-none transition" placeholder="¿En qué podemos ayudarte? Cuéntanos lo que necesitas..."></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition shadow-lg">Enviar a través del correo</button>
+                        <button type="submit" class="w-full bg-[#25D366] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#20bd5a] transition shadow-lg flex justify-center items-center gap-2">
+                            Enviar por WhatsApp <i class="fa-brands fa-whatsapp text-xl"></i>
+                        </button>
                     </form>
 
                     <!-- Google Maps Iframe -->
                     <div class="h-64 w-full rounded-xl overflow-hidden shadow-inner border border-gray-200">
-                        <!-- Usamos la dirección para generar el mapa integrado -->
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.7827877286127!2d-3.9318182!3d37.7716912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6e87f2fb321a0f%3A0xb355153243a7a9ce!2sC.%20Torredonjimeno%2C%2025%2C%2023650%20Torredelcampo%2C%20Ja%C3%A9n!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses" 
                             width="100%" 
@@ -432,6 +445,22 @@
 
     <!-- Funcionalidad JavaScript -->
     <script>
+        // --- FUNCIÓN PARA ENVIAR FORMULARIO POR WHATSAPP ---
+        function enviarWhatsapp(e) {
+            e.preventDefault(); // Evita que la página se recargue al enviar
+            
+            const nombre = document.getElementById('form-nombre').value;
+            const mensaje = document.getElementById('form-mensaje').value;
+            const telefono = "34634119152";
+            
+            // Construimos el mensaje con saltos de línea codificados
+            const textoMensaje = `Hola Bluelab, soy ${nombre}.\n\nMe gustaría consultar lo siguiente/pedir propuesta:\n${mensaje}`;
+            const textoCodificado = encodeURIComponent(textoMensaje);
+            
+            // Abrimos WhatsApp en una nueva pestaña
+            window.open(`https://wa.me/${telefono}?text=${textoCodificado}`, '_blank');
+        }
+
         // --- SISTEMA DE LIGHTBOX (Visor de imágenes) ---
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
@@ -443,7 +472,7 @@
                 lightboxImg.classList.remove('scale-95');
                 lightboxImg.classList.add('scale-100');
             }, 50);
-            document.body.style.overflow = 'hidden'; // Evita scroll de fondo
+            document.body.style.overflow = 'hidden';
         }
 
         function closeLightbox() {
@@ -455,43 +484,31 @@
 
         // =======================================================================
         // ⚙️ SISTEMA AUTOMÁTICO DE PORTFOLIO (API PARA VERCEL) ⚙️
-        // Usaremos una Función Serverless alojada en la carpeta /api
         // =======================================================================
         
         async function cargarPortfolioAutomatico() {
             const contenedor = document.getElementById('portfolio-gallery');
             
             try {
-                // 1. Hacemos una petición a nuestra propia API en Vercel
                 const respuesta = await fetch('/api/portfolio');
-                
-                if (!respuesta.ok) {
-                    throw new Error('La API de Vercel aún no está disponible o la carpeta no existe.');
-                }
+                if (!respuesta.ok) throw new Error('API no disponible');
 
-                // 2. La API nos devuelve un JSON limpio con los nombres de las fotos
                 const nombresArchivos = await respuesta.json();
-                
-                // 3. Convertimos los nombres en rutas reales para el HTML
                 const fotosEncontradas = nombresArchivos.map(nombre => 'portfolio/' + nombre);
 
-                // 4. Generamos la galería visual
                 if (fotosEncontradas.length > 0) {
                     generarHTMLGaleria(contenedor, fotosEncontradas);
                 } else {
                     mostrarMensajeVacio(contenedor);
                 }
-
             } catch (error) {
-                console.warn('Aviso Portfolio Automático:', error.message);
-                // Si estás en local sin arrancar servidor, mostrará fotos de prueba
+                console.warn('Aviso Portfolio:', error.message);
                 cargarFotosPruebaFallback(contenedor);
             }
         }
 
-        // Función que dibuja las imágenes en la web
         function generarHTMLGaleria(contenedor, arrayFotos) {
-            contenedor.innerHTML = ''; // Limpiamos primero
+            contenedor.innerHTML = ''; 
             arrayFotos.forEach((rutaFoto, index) => {
                 const itemDiv = document.createElement('div');
                 itemDiv.className = 'group relative overflow-hidden rounded-2xl shadow-md cursor-pointer aspect-square bg-gray-200';
@@ -513,7 +530,6 @@
                 <div class="col-span-full text-center py-12">
                     <i class="fa-solid fa-folder-open text-5xl text-blue-200 mb-4 block"></i>
                     <h3 class="text-xl font-bold text-gray-700">La carpeta está vacía</h3>
-                    <p class="text-gray-500 mt-2">Sube tus fotos a la carpeta <strong>"portfolio"</strong> en tu servidor web y aparecerán aquí automáticamente.</p>
                 </div>
             `;
         }
@@ -525,18 +541,13 @@
                 "https://images.unsplash.com/photo-1605626245842-db6c0db7f901?w=600&q=80"
             ];
             generarHTMLGaleria(contenedor, fotosPrueba);
-            console.log("Mostrando imágenes de demostración temporalmente porque el servidor bloquea la lectura de la carpeta.");
         }
 
         // --- INTERFAZ GENERAL Y ANIMACIONES ---
         document.addEventListener('DOMContentLoaded', () => {
-            // Iniciar el escaneo automático del portfolio
             cargarPortfolioAutomatico();
-
-            // Set current year in footer
             document.getElementById('year').textContent = new Date().getFullYear();
 
-            // Mobile menu toggle
             const btn = document.getElementById('mobile-menu-btn');
             const menu = document.getElementById('mobile-menu');
             
@@ -544,32 +555,28 @@
                 menu.classList.toggle('hidden');
             });
 
-            // Cerrar menú al hacer clic en un enlace (móvil)
-            const mobileLinks = menu.querySelectorAll('a');
-            mobileLinks.forEach(link => {
+            menu.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     menu.classList.add('hidden');
                 });
             });
 
-            // Navbar cambia de estilo al hacer scroll
             const navbar = document.getElementById('navbar');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 50) {
                     navbar.classList.add('shadow-md');
-                    navbar.classList.replace('py-4', 'py-0'); // Hacer un poco más estrecho si usamos paddings
+                    navbar.classList.replace('py-4', 'py-0');
                 } else {
                     navbar.classList.remove('shadow-md');
                 }
             });
 
-            // Scroll Animations (Fade in elements when visible)
             const fadeElements = document.querySelectorAll('.fade-in');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
-                        observer.unobserve(entry.target); // Solo animar una vez
+                        observer.unobserve(entry.target);
                     }
                 });
             }, {
