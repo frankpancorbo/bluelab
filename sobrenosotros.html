@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Sobre Nosotros | BLUELAB</title>
+    <meta name="description" content="Conoce la historia de BLUELAB. Más de 35 años de experiencia uniendo la tradición de la madera con la innovación del diseño 3D y el corte láser en Jaén.">
+    
+    <meta name="author" content="Bluelab Design & frankpancorbo studio">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        blue: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#0066cc',
+                            900: '#0a0f24',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .whatsapp-float {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50 selection:bg-blue-600 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-nav shadow-md transition-all duration-300" id="navbar" aria-label="Menú principal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center cursor-pointer" aria-label="Ir al inicio">
+                    <img src="logo-header.png" alt="Logotipo Bluelab - Diseño e Impresión 3D" class="h-14 md:h-16 object-contain" onerror="this.outerHTML='<div class=\'font-bold text-3xl tracking-tighter text-blue-900 flex items-center gap-2\'><i class=\'fa-solid fa-cube text-blue-600\'></i> BLUELAB</div>'">
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 font-semibold transition">Inicio</a>
+                    <a href="sobrenosotros.html" class="text-blue-600 font-bold transition">Sobre Nosotros</a>
+                    <a href="index.html#servicios" class="text-gray-700 hover:text-blue-600 font-semibold transition">Servicios</a>
+                    <a href="index.html#portfolio" class="text-gray-700 hover:text-blue-600 font-semibold transition">Portfolio</a>
+                    
+                    <!-- Redes sociales Desktop -->
+                    <div class="flex items-center gap-4 px-2" aria-label="Redes sociales">
+                        <a href="https://www.instagram.com/bluelab.design" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition" aria-label="Instagram de Bluelab"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="https://www.tiktok.com/@bluelab.design" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition" aria-label="TikTok de Bluelab"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                        <a href="https://www.facebook.com/search/top?q=Bluelab%20Ja%C3%A9n" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition" aria-label="Facebook de Bluelab"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+                    </div>
+
+                    <a href="index.html#contacto" class="bg-blue-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-700 transition shadow-lg hover:shadow-blue-500/30">Contactar</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600 focus:outline-none text-2xl" aria-label="Abrir menú">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <a href="index.html" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md">Inicio</a>
+                <a href="sobrenosotros.html" class="block px-3 py-3 text-base font-medium text-blue-600 font-bold bg-blue-50 rounded-md">Sobre Nosotros</a>
+                <a href="index.html#servicios" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md">Servicios</a>
+                <a href="index.html#portfolio" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md">Portfolio</a>
+                <a href="index.html#contacto" class="block px-3 py-3 text-base font-medium text-blue-600 font-bold hover:bg-blue-50 rounded-md">Contactar</a>
+            </div>
+            <!-- Redes sociales Mobile -->
+            <div class="px-4 py-5 bg-gray-50 border-t border-gray-100 flex justify-center gap-8">
+                <a href="https://www.instagram.com/bluelab.design" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 text-2xl" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@bluelab.design" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 text-2xl" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/search/top?q=Bluelab%20Ja%C3%A9n" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 text-2xl" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20"> <!-- Margen superior para la barra de navegación fija -->
+        <!-- Sección 1: Información / Sobre Nosotros -->
+        <section id="informacion" class="py-24 bg-white min-h-[80vh] flex items-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="fade-in">
+                        <div class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-bold mb-4">NUESTRA HISTORIA</div>
+                        <h1 class="text-4xl lg:text-5xl font-extrabold text-blue-900 mb-6 leading-tight">Uniendo tradición e innovación</h1>
+                        <div class="space-y-4 text-gray-600 leading-relaxed text-lg">
+                            <p>
+                                Somos una empresa familiar. Detrás de nuestro trabajo hay <strong>más de 35 años de experiencia en carpintería</strong>, transmitidos de generación en generación, y una nueva visión que apuesta por las últimas tecnologías como la impresión 3D, el corte y el grabado láser.
+                            </p>
+                            <p>
+                                Nacemos de la evolución natural de un oficio: la madera sigue siendo nuestra base, pero ahora la combinamos con herramientas digitales para crear piezas únicas, precisas y totalmente personalizadas.
+                            </p>
+                            <p>
+                                Nuestro objetivo es transformar ideas en objetos reales, cuidando cada detalle del proceso: desde el diseño inicial hasta el acabado final. Combinamos la experiencia artesanal con la precisión tecnológica para garantizar resultados de calidad, funcionales y estéticamente atractivos.
+                            </p>
+                        </div>
+                        <div class="mt-8">
+                            <a href="index.html#servicios" class="text-blue-600 font-bold hover:text-blue-800 transition flex items-center gap-2">
+                                Descubre nuestros servicios <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative fade-in mt-10 md:mt-0">
+                        <div class="absolute -inset-4 bg-blue-100 rounded-2xl transform rotate-3 z-0"></div>
+                        <img src="sobre-nosotros.jpg" alt="Sobre nosotros Bluelab" class="relative z-10 rounded-2xl shadow-xl w-full object-cover h-[500px]" onerror="this.src='https://images.unsplash.com/photo-1530968033775-2c92736b131e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        
+                        <div class="absolute -bottom-6 -left-6 bg-blue-600 text-white p-6 rounded-xl shadow-2xl z-20">
+                            <div class="text-4xl font-extrabold mb-1">+35</div>
+                            <div class="text-sm font-semibold uppercase tracking-wider">Años de experiencia</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-950 text-blue-200 py-8 border-t border-blue-900 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-y-3 md:gap-x-4 text-sm text-center">
+                <span>&copy; <span id="year"></span> Bluelab Design. Todos los derechos reservados.</span>
+                <span class="hidden md:inline text-blue-800">|</span>
+                <a href="aviso-legal.html" class="text-blue-300 hover:text-white transition">Aviso Legal</a>
+                <span class="hidden md:inline text-blue-800">|</span>
+                <a href="politica-privacidad.html" class="text-blue-300 hover:text-white transition">Política de Privacidad</a>
+                <span class="hidden md:inline text-blue-800">|</span>
+                <a href="https://frankpancorbostudio.com" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-white transition font-semibold">Web diseñada por frankpancorbo studio</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante WhatsApp -->
+    <a href="https://wa.me/34634119152" target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-4xl shadow-[0_10px_20px_rgba(37,211,102,0.4)] z-50 hover:bg-[#20bd5a] hover:scale-110 transition-all duration-300 whatsapp-float">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Funcionalidad JavaScript Básica -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // Animaciones
+            const fadeElements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
