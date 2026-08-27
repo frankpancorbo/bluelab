@@ -156,7 +156,7 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#inicio" class="text-gray-700 hover:text-blue-600 font-semibold transition">Inicio</a>
-                    <a href="#informacion" class="text-gray-700 hover:text-blue-600 font-semibold transition">Sobre Nosotros</a>
+                    <a href="sobrenosotros.html" class="text-gray-700 hover:text-blue-600 font-semibold transition">Sobre Nosotros</a>
                     <a href="#servicios" class="text-gray-700 hover:text-blue-600 font-semibold transition">Servicios</a>
                     <a href="#portfolio" class="text-gray-700 hover:text-blue-600 font-semibold transition">Portfolio</a>
                     
@@ -183,7 +183,7 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
             <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
                 <a href="#inicio" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md">Inicio</a>
-                <a href="#informacion" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md">Sobre Nosotros</a>
+                <a href="sobrenosotros.html" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md">Sobre Nosotros</a>
                 <a href="#servicios" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md">Servicios</a>
                 <a href="#portfolio" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md">Portfolio</a>
                 <a href="#contacto" class="block px-3 py-3 text-base font-medium text-blue-600 font-bold hover:bg-blue-50 rounded-md">Contactar</a>
@@ -215,9 +215,9 @@
                 </div>
             </div>
             
-            <!-- Scroll indicator -->
+            <!-- Scroll indicator (Ahora baja directo a servicios) -->
             <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white/70 animate-bounce">
-                <a href="#informacion" aria-label="Bajar a la siguiente sección"><i class="fa-solid fa-chevron-down text-3xl"></i></a>
+                <a href="#servicios" aria-label="Bajar a la siguiente sección"><i class="fa-solid fa-chevron-down text-3xl"></i></a>
             </div>
         </section>
 
@@ -233,38 +233,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Sección 1: Información / Sobre Nosotros -->
-        <section id="informacion" class="py-24 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                    <div class="fade-in">
-                        <div class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-bold mb-4">SOBRE NOSOTROS</div>
-                        <h2 class="text-4xl font-extrabold text-blue-900 mb-6">Uniendo tradición e innovación</h2>
-                        <div class="space-y-4 text-gray-600 leading-relaxed text-lg">
-                            <p>
-                                Somos una empresa familiar. Detrás de nuestro trabajo hay <strong>más de 35 años de experiencia en carpintería</strong>, transmitidos de generación en generación, y una nueva visión que apuesta por las últimas tecnologías como la impresión 3D, el corte y el grabado láser.
-                            </p>
-                            <p>
-                                Nacemos de la evolución natural de un oficio: la madera sigue siendo nuestra base, pero ahora la combinamos con herramientas digitales para crear piezas únicas, precisas y totalmente personalizadas.
-                            </p>
-                            <p>
-                                Nuestro objetivo es transformar ideas en objetos reales, cuidando cada detalle del proceso: desde el diseño inicial hasta el acabado final. Combinamos la experiencia artesanal con la precisión tecnológica para garantizar resultados de calidad, funcionales y estéticamente atractivos.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="relative fade-in">
-                        <div class="absolute -inset-4 bg-blue-100 rounded-2xl transform rotate-3 z-0"></div>
-                        <img src="sobre-nosotros.jpg" alt="Sobre nosotros Bluelab" class="relative z-10 rounded-2xl shadow-xl w-full object-cover h-[500px]" onerror="this.src='https://images.unsplash.com/photo-1530968033775-2c92736b131e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
-                        
-                        <div class="absolute -bottom-6 -left-6 bg-blue-600 text-white p-6 rounded-xl shadow-2xl z-20">
-                            <div class="text-4xl font-extrabold mb-1">+35</div>
-                            <div class="text-sm font-semibold uppercase tracking-wider">Años de experiencia</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Sección 2: Servicios Unificados -->
         <section id="servicios" class="py-24 bg-gray-50">
