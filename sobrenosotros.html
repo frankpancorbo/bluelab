@@ -90,7 +90,8 @@
                         <a href="https://www.facebook.com/search/top?q=Bluelab%20Ja%C3%A9n" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition" aria-label="Facebook de Bluelab"><i class="fa-brands fa-facebook-f text-xl"></i></a>
                     </div>
 
-                    <a href="index.html#contacto" class="bg-blue-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-700 transition shadow-lg hover:shadow-blue-500/30">Contactar</a>
+                    <!-- El botón ahora enlaza al #contacto de esta misma página -->
+                    <a href="#contacto" class="bg-blue-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-700 transition shadow-lg hover:shadow-blue-500/30">Contactar</a>
                 </div>
 
                 <!-- Mobile menu button -->
@@ -109,7 +110,7 @@
                 <a href="sobrenosotros.html" class="block px-3 py-3 text-base font-medium text-blue-600 font-bold bg-blue-50 rounded-md">Sobre Nosotros</a>
                 <a href="index.html#servicios" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md">Servicios</a>
                 <a href="index.html#portfolio" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md">Portfolio</a>
-                <a href="index.html#contacto" class="block px-3 py-3 text-base font-medium text-blue-600 font-bold hover:bg-blue-50 rounded-md">Contactar</a>
+                <a href="#contacto" class="block px-3 py-3 text-base font-medium text-blue-600 font-bold hover:bg-blue-50 rounded-md">Contactar</a>
             </div>
             <!-- Redes sociales Mobile -->
             <div class="px-4 py-5 bg-gray-50 border-t border-gray-100 flex justify-center gap-8">
@@ -121,8 +122,9 @@
     </nav>
 
     <main class="pt-20"> <!-- Margen superior para la barra de navegación fija -->
+        
         <!-- Sección 1: Información / Sobre Nosotros -->
-        <section id="informacion" class="py-24 bg-white min-h-[80vh] flex items-center">
+        <section id="informacion" class="py-24 bg-white flex items-center">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     <div class="fade-in">
@@ -130,7 +132,7 @@
                         <h1 class="text-4xl lg:text-5xl font-extrabold text-blue-900 mb-6 leading-tight">Uniendo tradición e innovación</h1>
                         <div class="space-y-4 text-gray-600 leading-relaxed text-lg">
                             <p>
-                                Somos una empresa familiar. Detrás de nuestro trabajo hay <strong>más de 35 años de experiencia en carpintería</strong>, transmitidos de generación en generación, y una nueva visión que apuesta por las últimas tecnologías como la impresión 3D, el corte y el grabado láser.
+                                Somos una empresa familiar. Detrás de nuestro trabajo hay <strong>más de 35 años de experiencia en carpintería</strong>, transmitidos de generación en generation, y una nueva visión que apuesta por las últimas tecnologías como la impresión 3D, el corte y el grabado láser.
                             </p>
                             <p>
                                 Nacemos de la evolución natural de un oficio: la madera sigue siendo nuestra base, pero ahora la combinamos con herramientas digitales para crear piezas únicas, precisas y totalmente personalizadas.
@@ -152,6 +154,105 @@
                         <div class="absolute -bottom-6 -left-6 bg-blue-600 text-white p-6 rounded-xl shadow-2xl z-20">
                             <div class="text-4xl font-extrabold mb-1">+35</div>
                             <div class="text-sm font-semibold uppercase tracking-wider">Años de experiencia</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Contacto (Duplicada de Index) -->
+        <section id="contacto" class="py-24 bg-gray-50 relative border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 bg-white rounded-3xl shadow-2xl overflow-hidden fade-in">
+                    
+                    <!-- Info de Contacto -->
+                    <div class="bg-blue-900 text-white p-10 md:p-16 flex flex-col justify-between">
+                        <div>
+                            <h2 class="text-4xl font-extrabold mb-4">Contacta con nosotros</h2>
+                            <p class="text-blue-200 mb-10 text-lg">Cuéntanos tu idea, pregúntanos por propuestas o solicita un presupuesto sin compromiso. Estaremos encantados de atenderte.</p>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="bg-blue-800/50 p-4 rounded-full mr-4 text-blue-300">
+                                        <i class="fa-solid fa-location-dot text-xl fa-fw"></i>
+                                    </div>
+                                    <address class="not-italic">
+                                        <h4 class="font-bold text-lg mb-1">Ubicación</h4>
+                                        <p class="text-blue-200">Pol. Ind. Los Llanos,<br>C/Torredonjimeno, 25<br>(Torredelcampo, Jaén)</p>
+                                    </address>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-blue-800/50 p-4 rounded-full mr-4 text-blue-300">
+                                        <i class="fa-solid fa-phone text-xl fa-fw"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-1">Teléfonos</h4>
+                                        <p class="text-blue-200 mb-1 flex items-center gap-2">
+                                            Móvil/Whatsapp: <a href="https://wa.me/34634119152" class="hover:text-white transition">634 119 152</a>
+                                            <i class="fa-brands fa-whatsapp text-[#25D366]"></i>
+                                        </p>
+                                        <p class="text-blue-200">Fijo: <a href="tel:+34953202284" class="hover:text-white transition">953 202 284</a></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-blue-800/50 p-4 rounded-full mr-4 text-blue-300">
+                                        <i class="fa-solid fa-envelope text-xl fa-fw"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-1">Correo Electrónico</h4>
+                                        <a href="mailto:bluelabstudio3d@gmail.com" class="text-blue-200 hover:text-white transition">bluelabstudio3d@gmail.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-12">
+                            <h4 class="font-bold text-lg mb-4">Síguenos en Redes Sociales</h4>
+                            <div class="flex gap-4">
+                                <a href="https://www.instagram.com/bluelab.design" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="bg-blue-800 hover:bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center transition shadow-lg"><i class="fa-brands fa-instagram text-xl"></i></a>
+                                <a href="https://www.tiktok.com/@bluelab.design" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="bg-blue-800 hover:bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center transition shadow-lg"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                                <a href="https://www.facebook.com/search/top?q=Bluelab%20Ja%C3%A9n" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="bg-blue-800 hover:bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center transition shadow-lg"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario y Mapa -->
+                    <div class="p-10 md:p-16 flex flex-col">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-6">Pide tu propuesta por WhatsApp</h3>
+                        <!-- Formulario reprogramado para enviar a WhatsApp -->
+                        <form onsubmit="enviarWhatsapp(event)" class="space-y-4 mb-10 flex-grow">
+                            <div>
+                                <label for="form-nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
+                                <input type="text" id="form-nombre" name="nombre" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#25D366] focus:border-transparent outline-none transition" placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label for="form-mensaje" class="block text-sm font-medium text-gray-700 mb-1">Tu idea o propuesta</label>
+                                <textarea id="form-mensaje" name="mensaje" required rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#25D366] focus:border-transparent outline-none transition" placeholder="¿En qué podemos ayudarte? Cuéntanos lo que necesitas..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-[#25D366] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#20bd5a] transition shadow-lg flex justify-center items-center gap-2">
+                                Enviar por WhatsApp <i class="fa-brands fa-whatsapp text-xl"></i>
+                            </button>
+                        </form>
+
+                        <!-- Google Maps Iframe -->
+                        <div class="h-64 w-full rounded-xl overflow-hidden shadow-inner border border-gray-200 mb-3">
+                            <iframe 
+                                title="Mapa de ubicación Bluelab Jaén"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.7827877286127!2d-3.9318182!3d37.7716912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6e87f2fb321a0f%3A0xb355153243a7a9ce!2sC.%20Torredonjimeno%2C%2025%2C%2023650%20Torredelcampo%2C%20Ja%C3%A9n!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        
+                        <!-- Dirección debajo del mapa -->
+                        <div class="text-center text-gray-500 text-sm font-medium flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-location-dot text-blue-600"></i> Pol. Ind. Los Llanos, Torredelcampo (Jaén)
                         </div>
                     </div>
                 </div>
@@ -179,8 +280,22 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- Funcionalidad JavaScript Básica -->
+    <!-- Funcionalidad JavaScript -->
     <script>
+        // --- FUNCIÓN PARA ENVIAR FORMULARIO POR WHATSAPP ---
+        function enviarWhatsapp(e) {
+            e.preventDefault(); 
+            
+            const nombre = document.getElementById('form-nombre').value;
+            const mensaje = document.getElementById('form-mensaje').value;
+            const telefono = "34634119152";
+            
+            const textoMensaje = `Hola Bluelab, soy ${nombre}.\n\nMe gustaría consultar lo siguiente/pedir propuesta:\n${mensaje}`;
+            const textoCodificado = encodeURIComponent(textoMensaje);
+            
+            window.open(`https://wa.me/${telefono}?text=${textoCodificado}`, '_blank');
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -189,6 +304,12 @@
             
             btn.addEventListener('click', () => {
                 menu.classList.toggle('hidden');
+            });
+
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
             });
 
             // Animaciones
