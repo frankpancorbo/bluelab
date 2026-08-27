@@ -4,43 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- ==================== ETIQUETAS SEO BÁSICAS ==================== -->
+    <!-- Título optimizado (Añadimos la provincia para SEO Local) -->
     <title>BLUELAB | Diseño, Impresión 3D y Corte Láser en Jaén</title>
+    
+    <!-- Meta Descripción (Lo que lee la gente en los resultados de Google - Máx 160 caracteres) -->
     <meta name="description" content="BLUELAB: Expertos en diseño e impresión 3D, corte y grabado láser. Prototipos, piezas técnicas, regalos personalizados y cartelería. Envíos a toda España.">
+    
+    <!-- Palabras Clave (Keywords) -->
     <meta name="keywords" content="impresión 3D, diseño 3D, corte láser, grabado láser, Torredelcampo, Jaén, prototipos, regalos personalizados, cartelería madera, piezas de repuesto, metacrilato">
+    
+    <!-- Autor y Robots -->
     <meta name="author" content="Bluelab Design & frankpancorbo studio">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://bluelab3d.com/">
 
+    <!-- ==================== ETIQUETAS PARA COMPARTIR EN REDES/WHATSAPP (Open Graph) ==================== -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bluelab3d.com/">
     <meta property="og:title" content="BLUELAB | Impresión 3D y Corte Láser">
     <meta property="og:description" content="Transformamos tus ideas en objetos reales. Diseño 3D, corte y grabado láser de alta precisión. ¡Pide presupuesto sin compromiso!">
-    <meta property="og:image" content="https://bluelab3d.com/logo-header.png">
+    <meta property="og:image" content="https://bluelab3d.com/logo-header.png"> <!-- Tu logo al compartir -->
     <meta property="og:locale" content="es_ES">
     
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="BLUELAB | Impresión 3D y Corte Láser">
     <meta name="twitter:description" content="Transformamos tus ideas en objetos reales. Diseño 3D, corte y grabado láser de alta precisión.">
     
+    <!-- ==================== RECURSOS EXTERNOS ==================== -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'], },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
                     colors: {
-                        blue: { 50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6', 600: '#0066cc', 900: '#0a0f24', }
+                        blue: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#0066cc',
+                            900: '#0a0f24',
+                        }
                     }
                 }
             }
         }
     </script>
 
+    <!-- DATOS ESTRUCTURADOS JSON-LD (Magia pura para el SEO Local de Google) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -79,18 +102,39 @@
     </script>
 
     <style>
-        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        /* Custom Styles & Animations */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
         .hero-pattern {
             background-image: linear-gradient(rgba(10, 15, 36, 0.8), rgba(0, 102, 204, 0.6)), url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
-        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-        #lightbox { display: none; opacity: 0; transition: opacity 0.3s ease; }
-        #lightbox.active { display: flex; opacity: 1; }
-        .whatsapp-float { animation: bounce 2s infinite; }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Lightbox styles */
+        #lightbox {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        #lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+        .whatsapp-float {
+            animation: bounce 2s infinite;
+        }
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
             40% {transform: translateY(-10px);}
@@ -100,6 +144,7 @@
 </head>
 <body class="font-sans text-gray-800 antialiased bg-gray-50 selection:bg-blue-600 selection:text-white">
 
+    <!-- Navbar -->
     <nav class="fixed w-full z-50 glass-nav shadow-sm transition-all duration-300" id="navbar" aria-label="Menú principal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -111,15 +156,18 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#inicio" class="text-gray-700 hover:text-blue-600 font-semibold transition">Inicio</a>
+                    <!-- Enlace directo a la página de Sobre Nosotros -->
                     <a href="sobrenosotros.html" class="text-gray-700 hover:text-blue-600 font-semibold transition">Sobre Nosotros</a>
                     <a href="#servicios" class="text-gray-700 hover:text-blue-600 font-semibold transition">Servicios</a>
                     <a href="#portfolio" class="text-gray-700 hover:text-blue-600 font-semibold transition">Portfolio</a>
                     
+                    <!-- Redes sociales Desktop -->
                     <div class="flex items-center gap-4 px-2" aria-label="Redes sociales">
-                        <a href="https://www.instagram.com/bluelab.design" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition"><i class="fa-brands fa-instagram text-xl"></i></a>
-                        <a href="https://www.tiktok.com/@bluelab.design" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition"><i class="fa-brands fa-tiktok text-xl"></i></a>
-                        <a href="https://www.facebook.com/search/top?q=Bluelab%20Ja%C3%A9n" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+                        <a href="https://www.instagram.com/bluelab.design" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition" aria-label="Instagram de Bluelab"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="https://www.tiktok.com/@bluelab.design" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition" aria-label="TikTok de Bluelab"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                        <a href="https://www.facebook.com/search/top?q=Bluelab%20Ja%C3%A9n" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition" aria-label="Facebook de Bluelab"><i class="fa-brands fa-facebook-f text-xl"></i></a>
                     </div>
+
                     <a href="#contacto" class="bg-blue-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-700 transition shadow-lg hover:shadow-blue-500/30">Contactar</a>
                 </div>
 
@@ -132,23 +180,27 @@
             </div>
         </div>
 
+        <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
             <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
                 <a href="#inicio" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md">Inicio</a>
+                <!-- Enlace directo a la página de Sobre Nosotros en móvil -->
                 <a href="sobrenosotros.html" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md">Sobre Nosotros</a>
                 <a href="#servicios" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md">Servicios</a>
                 <a href="#portfolio" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md">Portfolio</a>
                 <a href="#contacto" class="block px-3 py-3 text-base font-medium text-blue-600 font-bold hover:bg-blue-50 rounded-md">Contactar</a>
             </div>
+            <!-- Redes sociales Mobile -->
             <div class="px-4 py-5 bg-gray-50 border-t border-gray-100 flex justify-center gap-8">
-                <a href="https://www.instagram.com/bluelab.design" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 text-2xl"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@bluelab.design" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 text-2xl"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="https://www.facebook.com/search/top?q=Bluelab%20Ja%C3%A9n" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 text-2xl"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/bluelab.design" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 text-2xl" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@bluelab.design" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 text-2xl" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/search/top?q=Bluelab%20Ja%C3%A9n" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 text-2xl" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
             </div>
         </div>
     </nav>
 
     <main>
+        <!-- Hero Section -->
         <section id="inicio" class="hero-pattern relative h-screen flex items-center justify-center text-center">
             <div class="absolute inset-0 bg-gradient-to-b from-transparent to-blue-900/90"></div>
             <div class="relative z-10 px-4 max-w-5xl mx-auto fade-in">
@@ -165,11 +217,13 @@
                 </div>
             </div>
             
+            <!-- Scroll indicator (Baja a servicios ahora) -->
             <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white/70 animate-bounce">
                 <a href="#servicios" aria-label="Bajar a la siguiente sección"><i class="fa-solid fa-chevron-down text-3xl"></i></a>
             </div>
         </section>
 
+        <!-- Features Strip -->
         <div class="bg-blue-900 text-white py-8 border-b-4 border-blue-600 relative z-20 shadow-xl">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center divide-x divide-white/20">
@@ -182,15 +236,21 @@
             </div>
         </div>
 
+        <!-- SECCIÓN UNIFICADA DE SERVICIOS -->
         <section id="servicios" class="py-24 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Título Central -->
                 <div class="text-center max-w-3xl mx-auto mb-16 fade-in">
                     <div class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-bold mb-4">NUESTROS SERVICIOS</div>
                     <h2 class="text-4xl font-extrabold text-blue-900 mb-6">Soluciones precisas y a medida en Jaén</h2>
-                    <p class="text-lg text-gray-600">Trabajamos para particulares y empresas, ofreciendo soluciones tanto clásicas como innovadoras, adaptadas a las necesidades actuales.</p>
+                    <p class="text-lg text-gray-600">Trabajamos para particulares y empresas, ofreciendo soluciones integrales adaptadas a las necesidades actuales. Desde la idea hasta el producto final.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- ================= VISTA ORDENADOR (Tarjetas) ================= -->
+                
+                <!-- 1. BLOQUE ORDENADOR: Los 4 servicios originales (Oculto en móvil) -->
+                <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
                     <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:border-blue-500 transition-all duration-300 group fade-in">
                         <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                             <i class="fa-solid fa-cube text-3xl text-blue-600 group-hover:text-white"></i>
@@ -198,6 +258,7 @@
                         <h3 class="text-2xl font-bold text-blue-900 mb-3">Diseño 3D</h3>
                         <p class="text-gray-600">Diseño personalizado desde cero para dar vida a tus prototipos, piezas técnicas o ideas decorativas.</p>
                     </div>
+                    
                     <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:border-blue-500 transition-all duration-300 group fade-in">
                         <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                             <i class="fa-solid fa-print text-3xl text-blue-600 group-hover:text-white"></i>
@@ -205,6 +266,7 @@
                         <h3 class="text-2xl font-bold text-blue-900 mb-3">Impresión 3D</h3>
                         <p class="text-gray-600">Impresión bajo demanda de alta calidad. Desde regalos personalizados hasta pequeñas producciones industriales.</p>
                     </div>
+                    
                     <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:border-blue-500 transition-all duration-300 group fade-in">
                         <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                             <i class="fa-solid fa-wand-magic-sparkles text-3xl text-blue-600 group-hover:text-white"></i>
@@ -212,6 +274,7 @@
                         <h3 class="text-2xl font-bold text-blue-900 mb-3">Grabado Láser</h3>
                         <p class="text-gray-600">Grabado de alta precisión en láser de CO2 sobre madera, piel, metal, aluminio, cristal y acrílico.</p>
                     </div>
+                    
                     <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:border-blue-500 transition-all duration-300 group fade-in">
                         <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                             <i class="fa-solid fa-scissors text-3xl text-blue-600 group-hover:text-white"></i>
@@ -221,8 +284,10 @@
                     </div>
                 </div>
 
+                <!-- 2. BLOQUE ORDENADOR: Los nuevos servicios en tarjetas (Oculto en móvil) -->
                 <div class="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 fade-in">
-                    <!-- Card 1: Impresión -->
+                    
+                    <!-- Card: Impresión Profesional -->
                     <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:border-blue-500 transition-all duration-300 group">
                         <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                             <i class="fa-solid fa-print text-3xl text-blue-600 group-hover:text-white"></i>
@@ -234,7 +299,8 @@
                             <li>Impresión de diseños adaptados a cada necesidad.</li>
                         </ul>
                     </div>
-                    <!-- Card 2: Rotulación -->
+
+                    <!-- Card: Rotulación -->
                     <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:border-blue-500 transition-all duration-300 group">
                         <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                             <i class="fa-solid fa-car-side text-3xl text-blue-600 group-hover:text-white"></i>
@@ -247,22 +313,24 @@
                             <li>Vinilos decorativos con textos y diseños.</li>
                         </ul>
                     </div>
-                    <!-- Card 3: Ropa -->
+
+                    <!-- Card: Ropa y Textil (Incluye DTF y Sublimación) -->
                     <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:border-blue-500 transition-all duration-300 group">
                         <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                             <i class="fa-solid fa-shirt text-3xl text-blue-600 group-hover:text-white"></i>
                         </div>
                         <h3 class="text-xl font-bold text-blue-900 mb-3">Impresión Textil y Ropa</h3>
                         <ul class="text-gray-600 text-sm list-disc pl-5 space-y-2 mb-4">
-                            <li>Ropa laboral (sanitaria, industrial, hostelería).</li>
+                            <li>Ropa laboral y de seguridad para todos los sectores.</li>
                             <li>Polos, sudaderas, chaquetas y uniformes.</li>
-                            <li>Equipaciones deportivas y eventos.</li>
+                            <li>Equipaciones deportivas y para eventos.</li>
                         </ul>
                         <p class="text-xs font-semibold text-blue-800 bg-blue-50 p-2 rounded border border-blue-100">
                             <i class="fa-solid fa-star text-blue-500 mr-1"></i> Técnicas DTF, Sublimación y Vinilo
                         </p>
                     </div>
-                    <!-- Card 4: Bordado -->
+
+                    <!-- Card: Bordado -->
                     <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:border-blue-500 transition-all duration-300 group">
                         <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                             <i class="fa-solid fa-wand-magic-sparkles text-3xl text-blue-600 group-hover:text-white"></i>
@@ -270,7 +338,8 @@
                         <h3 class="text-xl font-bold text-blue-900 mb-3">Servicio de Bordado</h3>
                         <p class="text-gray-600 text-sm">Disponemos de servicio completo de bordado para prendas laborales, deportivas y promocionales, garantizando un acabado elegante y muy duradero.</p>
                     </div>
-                    <!-- Card 5: Merchandising -->
+
+                    <!-- Card: Merchandising -->
                     <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:border-blue-500 transition-all duration-300 group">
                         <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                             <i class="fa-solid fa-mug-hot text-3xl text-blue-600 group-hover:text-white"></i>
@@ -287,7 +356,8 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- Card 6: Regalos -->
+
+                    <!-- Card: Regalos -->
                     <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:border-blue-500 transition-all duration-300 group">
                         <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                             <i class="fa-solid fa-gift text-3xl text-blue-600 group-hover:text-white"></i>
@@ -295,18 +365,17 @@
                         <h3 class="text-xl font-bold text-blue-900 mb-3">Regalos Personalizados</h3>
                         <div class="grid grid-cols-2 gap-2 text-gray-600 text-sm">
                             <ul class="list-disc pl-5 space-y-1">
-                                <li>Profesores.</li>
-                                <li>Padre/Madre.</li>
+                                <li>Profesores y Madres/Padres.</li>
                                 <li>Bebés y parejas.</li>
                             </ul>
                             <ul class="list-disc pl-5 space-y-1">
                                 <li>Cumpleaños y bodas.</li>
-                                <li>Navidad y San Valentín.</li>
-                                <li>Fiestas populares.</li>
+                                <li>Navidad y fiestas populares.</li>
                             </ul>
                         </div>
                     </div>
-                    <!-- Card 7: Piel de Ubrique -->
+
+                    <!-- Card: Piel de Ubrique (Ocupa el centro abajo) -->
                     <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl hover:border-blue-500 transition-all duration-300 group md:col-span-2 lg:col-span-3">
                         <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                             <i class="fa-solid fa-wallet text-3xl text-blue-600 group-hover:text-white"></i>
@@ -320,7 +389,75 @@
                     </div>
                 </div>
 
+                <!-- ================= VISTA MÓVIL (Acordeones Desplegables para TODO) ================= -->
+                
                 <div class="grid md:hidden grid-cols-1 gap-4 mb-16 fade-in">
+                    
+                    <!-- Acordeón: Diseño 3D (Antiguo) -->
+                    <details class="group bg-white rounded-2xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden hover:border-blue-300 transition-colors cursor-pointer">
+                        <summary class="flex items-center justify-between p-5 font-bold text-blue-900 outline-none">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 shrink-0">
+                                    <i class="fa-solid fa-cube"></i>
+                                </div>
+                                <span class="text-lg">Diseño 3D</span>
+                            </div>
+                            <span class="transition duration-300 group-open:-rotate-180 text-blue-500 shrink-0 ml-4"><i class="fa-solid fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="px-5 pb-5 text-gray-600 border-t border-gray-50 pt-4 text-sm">
+                            <p>Diseño personalizado desde cero para dar vida a tus prototipos, piezas técnicas o ideas decorativas.</p>
+                        </div>
+                    </details>
+
+                    <!-- Acordeón: Impresión 3D (Antiguo) -->
+                    <details class="group bg-white rounded-2xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden hover:border-blue-300 transition-colors cursor-pointer">
+                        <summary class="flex items-center justify-between p-5 font-bold text-blue-900 outline-none">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 shrink-0">
+                                    <i class="fa-solid fa-print"></i>
+                                </div>
+                                <span class="text-lg">Impresión 3D</span>
+                            </div>
+                            <span class="transition duration-300 group-open:-rotate-180 text-blue-500 shrink-0 ml-4"><i class="fa-solid fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="px-5 pb-5 text-gray-600 border-t border-gray-50 pt-4 text-sm">
+                            <p>Impresión bajo demanda de alta calidad. Desde regalos personalizados hasta pequeñas producciones industriales.</p>
+                        </div>
+                    </details>
+
+                    <!-- Acordeón: Grabado Láser (Antiguo) -->
+                    <details class="group bg-white rounded-2xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden hover:border-blue-300 transition-colors cursor-pointer">
+                        <summary class="flex items-center justify-between p-5 font-bold text-blue-900 outline-none">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 shrink-0">
+                                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                </div>
+                                <span class="text-lg">Grabado Láser</span>
+                            </div>
+                            <span class="transition duration-300 group-open:-rotate-180 text-blue-500 shrink-0 ml-4"><i class="fa-solid fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="px-5 pb-5 text-gray-600 border-t border-gray-50 pt-4 text-sm">
+                            <p>Grabado de alta precisión en láser de CO2 sobre madera, piel, metal, aluminio, cristal y acrílico.</p>
+                        </div>
+                    </details>
+
+                    <!-- Acordeón: Corte Láser (Antiguo) -->
+                    <details class="group bg-white rounded-2xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden hover:border-blue-300 transition-colors cursor-pointer">
+                        <summary class="flex items-center justify-between p-5 font-bold text-blue-900 outline-none">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 shrink-0">
+                                    <i class="fa-solid fa-scissors"></i>
+                                </div>
+                                <span class="text-lg">Corte Láser</span>
+                            </div>
+                            <span class="transition duration-300 group-open:-rotate-180 text-blue-500 shrink-0 ml-4"><i class="fa-solid fa-chevron-down"></i></span>
+                        </summary>
+                        <div class="px-5 pb-5 text-gray-600 border-t border-gray-50 pt-4 text-sm">
+                            <p>Cortes perfectos y detallados para cartelería, decoración de eventos, piezas de repuesto y merchandising.</p>
+                        </div>
+                    </details>
+
+                    <!-- Acordeón 1: Impresión -->
                     <details class="group bg-white rounded-2xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden hover:border-blue-300 transition-colors cursor-pointer">
                         <summary class="flex items-center justify-between p-5 font-bold text-blue-900 outline-none">
                             <div class="flex items-center gap-3">
@@ -340,6 +477,7 @@
                         </div>
                     </details>
                     
+                    <!-- Acordeón 2: Rotulación -->
                     <details class="group bg-white rounded-2xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden hover:border-blue-300 transition-colors cursor-pointer">
                         <summary class="flex items-center justify-between p-5 font-bold text-blue-900 outline-none">
                             <div class="flex items-center gap-3">
@@ -360,6 +498,7 @@
                         </div>
                     </details>
                     
+                    <!-- Acordeón 3: Ropa -->
                     <details class="group bg-white rounded-2xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden hover:border-blue-300 transition-colors cursor-pointer">
                         <summary class="flex items-center justify-between p-5 font-bold text-blue-900 outline-none">
                             <div class="flex items-center gap-3">
@@ -382,6 +521,7 @@
                         </div>
                     </details>
                     
+                    <!-- Acordeón 4: Bordado -->
                     <details class="group bg-white rounded-2xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden hover:border-blue-300 transition-colors cursor-pointer">
                         <summary class="flex items-center justify-between p-5 font-bold text-blue-900 outline-none">
                             <div class="flex items-center gap-3">
@@ -397,6 +537,7 @@
                         </div>
                     </details>
                     
+                    <!-- Acordeón 5: Merchandising -->
                     <details class="group bg-white rounded-2xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden hover:border-blue-300 transition-colors cursor-pointer">
                         <summary class="flex items-center justify-between p-5 font-bold text-blue-900 outline-none">
                             <div class="flex items-center gap-3">
@@ -415,6 +556,7 @@
                         </div>
                     </details>
                     
+                    <!-- Acordeón 6: Regalos -->
                     <details class="group bg-white rounded-2xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden hover:border-blue-300 transition-colors cursor-pointer">
                         <summary class="flex items-center justify-between p-5 font-bold text-blue-900 outline-none">
                             <div class="flex items-center gap-3">
@@ -433,6 +575,7 @@
                         </div>
                     </details>
 
+                    <!-- Acordeón 7: Piel de Ubrique -->
                     <details class="group bg-white rounded-2xl shadow-sm border border-gray-100 [&_summary::-webkit-details-marker]:hidden hover:border-blue-300 transition-colors cursor-pointer">
                         <summary class="flex items-center justify-between p-5 font-bold text-blue-900 outline-none">
                             <div class="flex items-center gap-3">
@@ -453,7 +596,9 @@
                     </details>
                 </div>
 
+                <!-- Párrafo SEO Estratégico y Sectores (Común para móvil y PC) -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 fade-in">
+                    
                     <div class="bg-white p-8 rounded-3xl shadow-sm border-l-4 border-blue-500 flex flex-col justify-center">
                         <h3 class="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-3">
                             <i class="fa-solid fa-chart-line text-blue-500"></i> Tu centro de personalización integral
@@ -508,6 +653,7 @@
             </div>
         </section>
 
+        <!-- Sección 3: Portfolio Automático -->
         <section id="portfolio" class="py-24 bg-white border-t border-gray-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-12 fade-in">
@@ -516,7 +662,9 @@
                     <p class="text-lg text-gray-600">Explora algunos de nuestros últimos trabajos en impresión 3D, grabado y corte láser.</p>
                 </div>
 
+                <!-- Galería generada por JavaScript y la API -->
                 <div id="portfolio-gallery" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6 fade-in">
+                    <!-- Los items se cargarán aquí desde la API -->
                     <div class="col-span-full text-center py-12">
                         <i class="fa-solid fa-circle-notch fa-spin text-4xl text-blue-500 mb-4"></i>
                         <p class="text-gray-500">Cargando portfolio...</p>
@@ -531,6 +679,7 @@
             </div>
         </section>
 
+        <!-- Sección 4: Contacto -->
         <section id="contacto" class="py-24 bg-gray-50 relative border-t border-gray-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 bg-white rounded-3xl shadow-2xl overflow-hidden fade-in">
@@ -558,7 +707,7 @@
                                     </div>
                                     <div>
                                         <h4 class="font-bold text-lg mb-2">Teléfonos</h4>
-                                        <!-- Estructura de teléfono corregida -->
+                                        <!-- Estructura de teléfono corregida para que en móvil quede genial -->
                                         <div class="text-blue-200 mb-4">
                                             <div class="text-sm font-medium opacity-90 mb-1">Móvil/Whatsapp:</div>
                                             <div class="flex items-center gap-2 text-xl font-bold">
@@ -600,6 +749,7 @@
                     <!-- Formulario y Mapa -->
                     <div class="p-10 md:p-16 flex flex-col">
                         <h3 class="text-2xl font-bold text-blue-900 mb-6">Pide tu propuesta por WhatsApp</h3>
+                        <!-- Formulario reprogramado para enviar a WhatsApp -->
                         <form onsubmit="enviarWhatsapp(event)" class="space-y-4 mb-10 flex-grow">
                             <div>
                                 <label for="form-nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
@@ -614,6 +764,7 @@
                             </button>
                         </form>
 
+                        <!-- Google Maps Iframe -->
                         <div class="h-64 w-full rounded-xl overflow-hidden shadow-inner border border-gray-200 mb-3">
                             <iframe 
                                 title="Mapa de ubicación Bluelab Jaén"
@@ -626,6 +777,8 @@
                                 referrerpolicy="no-referrer-when-downgrade">
                             </iframe>
                         </div>
+                        
+                        <!-- Dirección debajo del mapa -->
                         <div class="text-center text-gray-500 text-sm font-medium flex items-center justify-center gap-2">
                             <i class="fa-solid fa-location-dot text-blue-600"></i> Pol. Ind. Los Llanos, Torredelcampo (Jaén)
                         </div>
@@ -635,6 +788,7 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-blue-950 text-blue-200 py-8 border-t border-blue-900 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-center items-center gap-y-3 md:gap-x-4 text-sm text-center">
@@ -662,17 +816,23 @@
         <img id="lightbox-img" src="" alt="Vista ampliada del proyecto Bluelab" class="max-h-[90vh] max-w-[90vw] object-contain rounded shadow-2xl transform scale-95 transition-transform duration-300">
     </div>
 
+    <!-- Funcionalidad JavaScript -->
     <script>
+        // --- FUNCIÓN PARA ENVIAR FORMULARIO POR WHATSAPP ---
         function enviarWhatsapp(e) {
             e.preventDefault(); 
+            
             const nombre = document.getElementById('form-nombre').value;
             const mensaje = document.getElementById('form-mensaje').value;
             const telefono = "34634119152";
+            
             const textoMensaje = `Hola Bluelab, soy ${nombre}.\n\nMe gustaría consultar lo siguiente/pedir propuesta:\n${mensaje}`;
             const textoCodificado = encodeURIComponent(textoMensaje);
+            
             window.open(`https://wa.me/${telefono}?text=${textoCodificado}`, '_blank');
         }
 
+        // --- SISTEMA DE LIGHTBOX ---
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
 
@@ -695,13 +855,17 @@
             document.body.style.overflow = 'auto';
         }
 
+        // --- SISTEMA AUTOMÁTICO DE PORTFOLIO CON ALT TAGS SEO ---
         async function cargarPortfolioAutomatico() {
             const contenedor = document.getElementById('portfolio-gallery');
+            
             try {
                 const respuesta = await fetch('/api/portfolio');
                 if (!respuesta.ok) throw new Error('API no disponible');
+
                 const nombresArchivos = await respuesta.json();
                 const fotosEncontradas = nombresArchivos.map(nombre => 'portfolio/' + nombre);
+
                 if (fotosEncontradas.length > 0) {
                     generarHTMLGaleria(contenedor, fotosEncontradas);
                 } else {
@@ -718,13 +882,17 @@
             arrayFotos.forEach((rutaFoto, index) => {
                 const itemDiv = document.createElement('div');
                 itemDiv.className = 'group relative overflow-hidden rounded-2xl shadow-md cursor-pointer aspect-square bg-gray-200';
+                
+                // Nombre base del archivo formateado para que funcione como texto alternativo SEO
                 const nombreArchivo = rutaFoto.split('/').pop().split('.')[0].replace(/-/g, ' ');
+
                 itemDiv.innerHTML = `
                     <img src="${rutaFoto}" alt="Proyecto Bluelab: ${nombreArchivo} - Impresión 3D y Grabado" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" loading="lazy" onerror="this.src='https://via.placeholder.com/600x600?text=Error+Cargando+Foto'">
                     <div class="absolute inset-0 bg-blue-900/0 group-hover:bg-blue-900/60 transition-all duration-300 flex items-center justify-center">
                         <i class="fa-solid fa-magnifying-glass-plus text-white text-4xl opacity-0 group-hover:opacity-100 transform scale-50 group-hover:scale-100 transition-all duration-300 delay-100"></i>
                     </div>
                 `;
+                
                 itemDiv.onclick = () => openLightbox(rutaFoto);
                 contenedor.appendChild(itemDiv);
             });
@@ -748,6 +916,7 @@
             generarHTMLGaleria(contenedor, fotosPrueba);
         }
 
+        // --- INTERFAZ GENERAL Y ANIMACIONES ---
         document.addEventListener('DOMContentLoaded', () => {
             cargarPortfolioAutomatico();
             document.getElementById('year').textContent = new Date().getFullYear();
@@ -755,9 +924,14 @@
             const btn = document.getElementById('mobile-menu-btn');
             const menu = document.getElementById('mobile-menu');
             
-            btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
             menu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => { menu.classList.add('hidden'); });
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
             });
 
             const navbar = document.getElementById('navbar');
@@ -778,9 +952,14 @@
                         observer.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+            }, {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            });
 
-            fadeElements.forEach(element => { observer.observe(element); });
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
         });
     </script>
 </body>
